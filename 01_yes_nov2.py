@@ -1,8 +1,11 @@
 # Functions go here...
+from tkinter import N
+
+
 def yes_no (question):
   valid = False
   while not valid:
-    response = input ( "Have you played this game before? "). lower()
+    response = input (question). lower()
 
     if response == "yes" or response == "y":
         response = "yes"
@@ -16,26 +19,8 @@ def yes_no (question):
       print("Please answer yes / no")
 
 # Main Routine goes here...
-show_instructions = ""
-while show_instructions.lower () != "xxx":
-
-    # Ask the user if they have played before
-
-
-
-    show_instructions = input ( "have you played this game before "). lower()
-
-    # If they say yes, output 'program continues'
-    if show_instructions == "yes" or show_instructions == "y":
-        show_instructions = "yes"
-        print ("program continues")
-        # valid = True
-
-    elif show_instructions == "no" or show_instructions == "n":
-        show_instructions = "no"
-        print ("display instructions")
-
-    # If they say no, output 'display instructions'
-    else:
-        print("Please answer yes / no")
-
+show_instructions = yes_no ("Have you played the game before? ")
+print ("You chose {} " .format(show_instructions))
+print()
+having_fun = yes_no ("Are you having fun")
+print ("you said banana {} to having fun".format(having_fun))
