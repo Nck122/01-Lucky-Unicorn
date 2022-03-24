@@ -5,12 +5,10 @@ def yes_no (question):
     response = input ( "Have you played this game before? "). lower()
 
     if response == "yes" or response == "y":
-        response = "yes"
-        return response
+        return "yes"
 
     elif response == "no" or response == "n":
-        response = "no"
-        return response
+        return "no"
  
     else:
       print("Please answer yes / no")
@@ -29,13 +27,10 @@ while show_instructions.lower () != "xxx":
     if show_instructions == "yes" or show_instructions == "y":
         show_instructions = "yes"
         print ("program continues")
-        # valid = True
+
 
     elif show_instructions == "no" or show_instructions == "n":
         show_instructions = "no"
         print ("display instructions")
 
-    # If they say no, output 'display instructions'
-    else:
-        print("Please answer yes / no")
 
