@@ -13,6 +13,29 @@ def yes_no (question):
     else:
       print("Please answer yes / no")
 
+# checks that a number is between two values
+def num_check(question, low, high) : 
+
+    error = "Please enter an whole number between 1 and 10"
+
+    vaild = False
+    while not vaild:
+        try:
+            # ask the question
+            response = int(input(question)) 
+
+        
+            # if the amount is too low / to high give
+            if low < response <= high:
+               return response
+
+            # output an error
+            else:
+                print(error)
+
+        except ValueError:
+            print(error)
+
 # Main Routine goes here...
 
 print()
@@ -28,7 +51,9 @@ if show_instructions == "no":
 
 
 print()
-print("Game continues...")
+how_much = num_check ("how much would you like to play with ", 0, 10)\
+
+print("You will be spending $ {}".format(how_much))
 
 
  
